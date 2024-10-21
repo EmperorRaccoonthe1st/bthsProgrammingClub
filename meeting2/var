@@ -27,4 +27,4 @@ print(bolVar)
 print(stringVar)
 print(listVar)
 print(dictVar)
-
+str(variable)

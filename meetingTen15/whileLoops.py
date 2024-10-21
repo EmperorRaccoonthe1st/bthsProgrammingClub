@@ -24,6 +24,7 @@ while var < 100:
 while True:
     inputVar = str(input("Type quit to end the program: "))
     if inputVar == "quit":
+        print("Ended!!!")
         break
 
 

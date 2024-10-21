@@ -35,13 +35,55 @@ data = [
 
 # Write me a program that takes this data and outputs these metrics:
 # Amount of People, Highest Salary, Oldest Person, Youngest Person
-# I also want it to take a response from the user, asking if their is a person in the dataset that has a specific hobby
+# I also want it to take a response from the user, 
+# asking if their is a person in the dataset that has a specific hobby
 
-
-
-EmperorRaccoonthe1st
-
-
+while True:
+    inputVar = str(input("What do you want to do: "))
+    if inputVar == "quit":
+        break
+    elif inputVar == "1":
+        amount = 0
+        for x in data:
+            amount += 1
+        print("###")
+        print("###")
+        print("###")
+        print(f"The amount of people in the dataset is {amount}")
+    elif inputVar == "2":
+        hSal = 0
+        for i in data:
+            newSal = i[-1]
+            if newSal > hSal:
+                hSal = newSal
+        print(f"The highest salary is {hSal}")
+    elif inputVar == "3":
+        hAge = 0
+        for i in data:
+            newAge = i[2]
+            if newAge > hAge:
+                hAge = newAge
+        for i in data:
+            if i[2] == hAge:
+                print(f"The oldest person is {i[0]} {i[1]}")
+    elif inputVar == "4":
+        print("Youngest")
+        sAge = 100
+        for i in data:
+            newAge = i[2]
+            if newAge < sAge:
+                sAge = newAge
+        for i in data:
+            if i[2] == sAge:
+                print(f"The youngest person is {i[0]} {i[1]}")
+    elif inputVar == "5":
+        hobby = str(input("Hobby: "))
+        for i in data:
+            if i[4] == hobby:
+                print(f"{i[0]} {i[1]} has {hobby} as their hobby")
+                break
+        else:
+            print(f"No one has the hobby of {hobby}")
 
 
 
