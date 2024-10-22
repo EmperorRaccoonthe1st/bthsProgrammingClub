@@ -38,26 +38,27 @@ data = [
 # I also want it to take a response from the user, 
 # asking if their is a person in the dataset that has a specific hobby
 
-while True:
-    inputVar = str(input("What do you want to do: "))
-    if inputVar == "quit":
-        break
-    elif inputVar == "1":
-        amount = 0
-        for x in data:
-            amount += 1
-        print("###")
-        print("###")
-        print("###")
-        print(f"The amount of people in the dataset is {amount}")
-    elif inputVar == "2":
+
+
+def findSal(type:str):
+    if type == "high":
         hSal = 0
         for i in data:
             newSal = i[-1]
             if newSal > hSal:
                 hSal = newSal
-        print(f"The highest salary is {hSal}")
-    elif inputVar == "3":
+        return hSal
+    else:  
+        hSal = 100000000
+        for i in data:
+            newSal = i[-1]
+            if newSal < hSal:
+                hSal = newSal
+        return hSal
+
+
+def findAge(type:str):
+    if type == "old":
         hAge = 0
         for i in data:
             newAge = i[2]
@@ -65,9 +66,9 @@ while True:
                 hAge = newAge
         for i in data:
             if i[2] == hAge:
-                print(f"The oldest person is {i[0]} {i[1]}")
-    elif inputVar == "4":
-        print("Youngest")
+                name = i[0] + " " + i[1]
+                return name
+    else:
         sAge = 100
         for i in data:
             newAge = i[2]
@@ -75,15 +76,38 @@ while True:
                 sAge = newAge
         for i in data:
             if i[2] == sAge:
-                print(f"The youngest person is {i[0]} {i[1]}")
+                name = i[0] + " " + i[1]
+                return name
+
+
+def findHobby(hobby: str):
+    for i in data:
+        if i[4] == hobby:
+            print(f"{i[0]} {i[1]} has {hobby} as their hobby")
+            break
+    else:
+        print(f"No one has the hobby of {hobby}")
+
+
+
+
+while True:
+    inputVar = str(input("What do you want to do: "))
+    if inputVar == "quit":
+        break
+    elif inputVar == "1":
+        amount = len(data)       
+        print(f"The amount of people in the dataset is {amount}")
+    elif inputVar == "2":
+        print(f"The highest salary is: {findSal("high")}")
+    elif inputVar == "3":
+        print(f"The lowest salary is: {findSal("low")}")
+    elif inputVar == "4":
+        print(f"The oldest person is {findAge("old")}")
     elif inputVar == "5":
-        hobby = str(input("Hobby: "))
-        for i in data:
-            if i[4] == hobby:
-                print(f"{i[0]} {i[1]} has {hobby} as their hobby")
-                break
-        else:
-            print(f"No one has the hobby of {hobby}")
+        print(f"The youngest person is {findAge("young")}")
+    elif inputVar == "6":
+        findHobby(str(input()))
 
 
 

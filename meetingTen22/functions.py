@@ -7,6 +7,8 @@
 def myExampleFunc(parameter1, parameter2):
     pass
 
+
+
 def repeatTenTimes(text):
     for i in range(10):
         print(text)
@@ -18,12 +20,15 @@ getInput = str(input("Put your input here: "))
 
 repeatTenTimes(getInput)
 
+for i in range(10):
+    print(getInput)
 
 
 
 
 
-
+def funcy(var):
+    pass
 
 
 
@@ -31,10 +36,10 @@ repeatTenTimes(getInput)
 
 # Now you can specify what typw the parameter must be to ensure type safty and minimize errors
 
-def typeSafeFunc(text:str, num:int, bol:bool):
-    for i in range(num):
+def typeSafeFunc(text:str, loopNum:str, isExlame:bool):
+    for i in range(loopNum):
         print(text)
-        if bool:
+        if isExlame == True:
             print(text+"!")
 
 # These parameters are then forced to be whatever type they are
@@ -51,12 +56,14 @@ typeSafeFunc("I'm Owen", 50, True)
 # The "return" will end a function a spit out a value
 
 def spitter(text: str):
-    return text + "!!!!"
+    newText = text + "!!!!"
+    return newText
 
 # now I have to print the result of the function
 print(spitter("Hey"))
 
-
+def isFruit(fruitName:str):
+    pass
 
 
 
