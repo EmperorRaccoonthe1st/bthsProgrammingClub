@@ -39,7 +39,7 @@ data = [
 # asking if their is a person in the dataset that has a specific hobby
 
 
-
+# 
 def findSal(type:str):
     if type == "high":
         hSal = 0
