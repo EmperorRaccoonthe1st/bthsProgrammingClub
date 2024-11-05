@@ -6,8 +6,8 @@ inputName = []
 inputHobby = []
 
 for i in range(5):
-    inputName = inputName  input("Input a name: ")
-    inputHobby = inputHobby + input("Input a hobby: ")
+    inputName += [input("Input a name: ")]
+    inputHobby += [input("Input a hobby: ")]
 print(inputName)
 
 for i in inputName:
