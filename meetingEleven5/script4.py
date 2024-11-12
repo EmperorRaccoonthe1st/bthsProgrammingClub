@@ -1,10 +1,13 @@
-number = int(input("Enter a number: "))
-if number % 2 == 0:
-  print("The number is even.")
-else:
-  print("The number is odd.")
+print("###")
+
+def isEven(num:int) -> bool:
+  if num % 2 == 0:
+    return True
+  else:
+    return False
 
 
+print(isEven(int(input("Put a number: "))))
 
 
 
