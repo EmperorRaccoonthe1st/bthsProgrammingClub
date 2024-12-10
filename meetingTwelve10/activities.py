@@ -1,0 +1,30 @@
+# https://www.codecademy.com/resources/blog/python-code-challenges-for-beginners/\
+# We'll be doing #4, 5, 6, 7, 8, 9, 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
